@@ -5,7 +5,7 @@ import Header from './Header'
 import AsyncStorage from '@react-native-community/async-storage';
 
 
-const Home = (props)=>{
+const TemperatureCheck = (props)=>{
     const [info,setInfo] = useState({
         name:"loading !!",
         temp:"loading",
@@ -88,4 +88,4 @@ const Home = (props)=>{
 }
 
 
-export default Home
+export default TemperatureCheck

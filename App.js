@@ -9,7 +9,7 @@ import {
 import {NavigationContainer} from '@react-navigation/native'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import Search from './screens/Search'
-import Home from './screens/Home'
+import TemperatureCheck from './screens/TemperatureCheck'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const Tab = createBottomTabNavigator()
@@ -22,8 +22,8 @@ const App= () => {
          screenOptions={({route})=>({
            tabBarIcon:({color})=>{
              let iconName;
-             if(route.name==="home"){
-               iconName = 'home-city-outline'
+             if(route.name==="TemperatureCheck"){
+               iconName = 'TemperatureCheck-city-outline'
              }else if(route.name==="search"){
                iconName = "city"
              }
@@ -39,7 +39,7 @@ const App= () => {
 
 
         >
-          <Tab.Screen name="home" component={Home} 
+          <Tab.Screen name="TemperatureCheck" component={TemperatureCheck} 
            initialParams={{city:"london"}}
           />
           <Tab.Screen name="search" component={Search} />

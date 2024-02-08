@@ -18,12 +18,12 @@ export default Search =({navigation})=> {
     }
     const btnClick = async ()=>{
         await AsyncStorage.setItem("newcity",city)
-        navigation.navigate("home",{city:city})
+        navigation.navigate("TemperatureCheck",{city:city})
     }
     const listClick = async (cityname)=>{
         setCity(cityname)
         await AsyncStorage.setItem("newcity",cityname)
-        navigation.navigate("home",{city:cityname})
+        navigation.navigate("TemperatureCheck",{city:cityname})
     }
     return (
      <View style={{flex:1}}>
